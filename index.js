@@ -1,13 +1,20 @@
-// grab the count-el Element, store it in a a count el variable
+// 1. Grab the save-el paragrah and store it in a variable called saveEl
+let countEl = document.getElementById("count-el")
+let count = 0
 
-let countEl = document.getElementById("count-el");
-let count = 0;
+let saveEl = document.getElementById("save-el")
 
 function increment() {
-  count++;
-  countEl.innerText = count;
+    count += 1
+    countEl.textContent = count
 }
 
+
 function save() {
-  console.log(count);
+    let dashed =  count + " -"
+    saveEl.textContent += dashed;
+    countEl.textContent = 0;
+    count = 0;
 }
+
+
